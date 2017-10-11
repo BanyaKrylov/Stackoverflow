@@ -55,8 +55,8 @@ public class StackPage extends AbstractPage{
     public StackPage search(String searchText) {
         type(fieldSearch, searchText);
         click(buttonSearch);
+        verifySummaryQuestions(questionsSummary);
         click(questionsSummary);
-//        Assert.assertTrue(questionsSummary.isEnabled());
         return this;
     }
 
@@ -68,9 +68,9 @@ public class StackPage extends AbstractPage{
     public StackPage searchTags(String searchText) {
         click(tagsButtonSearch);
         type(tagsSearch, searchText);
-       // Assert.assertTrue(tagsResult.isEnabled());
+        verifyTagsQuestions(fullMatchTagsResult);
         click(fullMatchTagsResult);
-       // Assert.assertTrue(questionsHeader.isEnabled());
+        verifyTagsQuestions(verifyTags);
         return this;
     }
 }
