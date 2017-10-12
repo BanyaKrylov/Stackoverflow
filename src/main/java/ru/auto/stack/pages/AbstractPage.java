@@ -60,18 +60,18 @@ public abstract class AbstractPage {
         elementQuestions = driver.findElements(locator);
         for (WebElement element : elementQuestions) {
             titleQuestions.add(element.getAttribute("title"));
-            for (int i = 0; i < titleQuestions.size(); i++) {
-                Assert.assertTrue(titleQuestions.get(i).contains("webdriver"));
+            for (String title : titleQuestions) {
+                Assert.assertTrue(title.contains("webdriver"));
             }
         }
     }
 
-    protected void verifySummaryQuestions(List locators) {
+    protected void verifySummaryQuestions(List<WebElement> locators) {
         elementQuestions = locators;
         for (WebElement element : elementQuestions) {
             titleQuestions.add(element.getAttribute("title"));
-            for (int i = 0; i < titleQuestions.size(); i++) {
-                Assert.assertTrue(titleQuestions.get(i).contains("webdriver"));
+            for (String title : titleQuestions) {
+                Assert.assertTrue(title.contains("webdriver"));
             }
         }
     }
@@ -80,18 +80,18 @@ public abstract class AbstractPage {
         tagsQuestions = driver.findElements(locator);
         for (WebElement element : tagsQuestions) {
             textTags.add(element.getText());
-            for (int i = 0; i < textTags.size(); i++) {
-                Assert.assertTrue(textTags.get(i).contains("webdriver"));
+            for (String text : textTags) {
+                Assert.assertTrue(text.contains("webdriver"));
             }
         }
     }
 
-    protected void verifyTagsQuestions(List locators) {
+    protected void verifyTagsQuestions(List<WebElement> locators) {
         tagsQuestions = locators;
         for (WebElement element : tagsQuestions) {
             textTags.add(element.getText());
-            for (int i = 0; i < textTags.size(); i++) {
-                Assert.assertTrue(textTags.get(i).contains("webdriver"));
+            for (String text : textTags) {
+                Assert.assertTrue(text.contains("webdriver"));
             }
         }
     }

@@ -19,10 +19,10 @@ public class StackPage extends AbstractPage{
     @FindBy(xpath = "//div[@id='question-header']/h1/a")
     private WebElement questionsHeader;
 
-    @FindBy(xpath = "//div[@class='question-summary search-result']//a[contains(@title, 'webdriver')]")
+    @FindBy(xpath = "//div[@class='result-link']/span")
     private WebElement questionsSummary;
 
-    @FindBy(xpath = "//div[@class='question-summary search-result']//a[contains(@title, 'webdriver')]")
+    @FindBy(xpath = "//div[@class='result-link']/span/a")
     private List<WebElement> questionsSummarys;
 
     @FindBy(xpath = "//input[@id='tagfilter']")
