@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class StackPage extends AbstractPage{
     private final static String HOME_URL = "https://stackoverflow.com/";
 
@@ -19,6 +21,9 @@ public class StackPage extends AbstractPage{
 
     @FindBy(xpath = "//div[@class='question-summary search-result']//a[contains(@title, 'webdriver')]")
     private WebElement questionsSummary;
+
+    @FindBy(xpath = "//div[@class='question-summary search-result']//a[contains(@title, 'webdriver')]")
+    private List<WebElement> questionsSummarys;
 
     @FindBy(xpath = "//input[@id='tagfilter']")
     private WebElement tagsSearch;
@@ -53,7 +58,7 @@ public class StackPage extends AbstractPage{
     }
 
     public StackPage verifyTitleQuestion() {
-        verifySummaryQuestions(questionsSummary);
+        verifySummaryQuestions(questionsSummarys);
         return this;
     }
 
