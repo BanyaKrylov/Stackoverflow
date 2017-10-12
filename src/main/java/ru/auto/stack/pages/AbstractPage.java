@@ -11,15 +11,13 @@ import org.testng.Assert;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by 05.10.2017.
- */
 public abstract class AbstractPage {
     protected WebDriver driver;
     protected List<WebElement> elementQuestions;
     protected List<WebElement> tagsQuestions;
     protected List<String> titleQuestions;
     protected List<String> textTags;
+    protected List<String> textHeaders;
 
     public AbstractPage(WebDriver driver) {
         this.driver = driver;
@@ -58,12 +56,32 @@ public abstract class AbstractPage {
         }
     }
 
+    protected void verifySummaryQuestions(By locator) {
+        elementQuestions = driver.findElements(locator);
+        for (WebElement element : elementQuestions) {
+            titleQuestions.add(element.getAttribute("title"));
+            for (int i = 0; i < titleQuestions.size(); i++) {
+                Assert.assertTrue(titleQuestions.get(i).contains("webdriver"));
+            }
+        }
+    }
+
     protected void verifySummaryQuestions(WebElement locator) {
         elementQuestions = driver.findElements(By.xpath(String.valueOf(locator)));
         for (WebElement element : elementQuestions) {
             titleQuestions.add(element.getAttribute("title"));
             for (int i = 0; i < titleQuestions.size(); i++) {
                 Assert.assertTrue(titleQuestions.get(i).contains("webdriver"));
+            }
+        }
+    }
+
+    protected void verifyTagsQuestions(By locator) {
+        tagsQuestions = driver.findElements(locator);
+        for (WebElement element : tagsQuestions) {
+            textTags.add(element.getText());
+            for (int i = 0; i < textTags.size(); i++) {
+                Assert.assertTrue(textTags.get(i).contains("webdriver"));
             }
         }
     }
@@ -76,6 +94,18 @@ public abstract class AbstractPage {
                 Assert.assertTrue(textTags.get(i).contains("webdriver"));
             }
         }
+    }
+
+    protected void getHeadersQuestions(WebElement headerLocator) {
+        for (int i = 0; i < titleQuestions.size(); i++) {
+            click(elementQuestions.get(i));
+            textHeaders.add(headerLocator.getText());
+            driver.navigate().back();
+        }
+    }
+
+    protected void assertSummaryAndHeadersQuestions() {
+        Assert.assertEquals(titleQuestions, textHeaders);
     }
 
     public void switchToTabOrWindowWithIndex(int tabIndex) {

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="677783a2-c551-4451-a616-5562ea0b5799" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/auto/stack/ApplicationManagers/StackManager.java" afterPath="$PROJECT_DIR$/src/main/java/ru/auto/stack/ApplicationManagers/StackManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/auto/stack/Helpers/SearchHelper.java" afterPath="$PROJECT_DIR$/src/main/java/ru/auto/stack/Helpers/SearchHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/auto/stack/driver/DriverManager.java" afterPath="$PROJECT_DIR$/src/main/java/ru/auto/stack/driver/DriverManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/AbstractPage.java" afterPath="$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/AbstractPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/StackPage.java" afterPath="$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/StackPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/auto/stack/AbstractTest.java" afterPath="$PROJECT_DIR$/src/test/java/ru/auto/stack/AbstractTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/auto/stack/SearchTests.java" afterPath="$PROJECT_DIR$/src/test/java/ru/auto/stack/SearchTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -25,12 +30,14 @@
       <file leaf-file-name="AbstractPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/AbstractPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="737">
-              <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+            <state relative-caret-position="691">
+              <caret line="69" column="43" lean-forward="false" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1097#1098#0" expanded="true" />
-                <element signature="e#1128#1129#0" expanded="true" />
+                <element signature="e#1103#1104#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+                <element signature="e#3733#3734#0" expanded="true" />
+                <element signature="e#3797#3798#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -39,8 +46,8 @@
       <file leaf-file-name="StackPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/StackPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+            <state relative-caret-position="340">
+              <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -49,8 +56,8 @@
       <file leaf-file-name="SearchTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/auto/stack/SearchTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            <state relative-caret-position="165">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -415,14 +422,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/GMailPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/EbayPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/auto/stack/AbstractTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/auto/stack/ApplicationManagers/EbayManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/auto/stack/ApplicationManagers/StackManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/auto/stack/SearchTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/auto/stack/AbstractTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/auto/stack/Helpers/SearchHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/auto/stack/driver/DriverManager.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/auto/stack/SearchTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/AbstractPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/auto/stack/ApplicationManagers/StackManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/StackPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/AbstractPage.java" />
       </list>
     </option>
   </component>
@@ -723,24 +730,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SearchTests_Search - 2017.10.11 at 23h 13m 10s.xml">
-      <configuration name="SearchTests.Search" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="SearchTests_Search - 2017.10.11 at 23h 15m 07s.xml">
-      <configuration name="SearchTests.Search" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="SearchTests_Search - 2017.10.11 at 23h 22m 04s.xml">
-      <configuration name="SearchTests.Search" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="SearchTests_Search - 2017.10.11 at 23h 23m 44s.xml">
-      <configuration name="SearchTests.Search" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="SearchTests_Search - 2017.10.11 at 23h 24m 29s.xml">
-      <configuration name="SearchTests.Search" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="SearchTests_Search - 2017.10.12 at 00h 13m 17s.xml">
-      <configuration name="SearchTests.Search" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="SearchTests_Search - 2017.10.12 at 00h 14m 36s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
@@ -751,6 +740,24 @@
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
     <history-entry file="SearchTests_Search - 2017.10.12 at 00h 26m 12s.xml">
+      <configuration name="SearchTests.Search" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="SearchTests_Search - 2017.10.12 at 11h 47m 23s.xml">
+      <configuration name="SearchTests.Search" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="SearchTests_Search - 2017.10.12 at 11h 56m 21s.xml">
+      <configuration name="SearchTests.Search" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="SearchTests_Search - 2017.10.12 at 12h 12m 45s.xml">
+      <configuration name="SearchTests.Search" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="SearchTests_Search - 2017.10.12 at 12h 14m 55s.xml">
+      <configuration name="SearchTests.Search" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="SearchTests_Search - 2017.10.12 at 12h 17m 33s.xml">
+      <configuration name="SearchTests.Search" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="SearchTests_Search - 2017.10.12 at 12h 18m 33s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -795,7 +802,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -816,45 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/stack/Helpers/SearchHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/auto/stack/AbstractTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/stack/ApplicationManagers/StackManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#320#321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/stack/driver/DriverManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.11/77da7afb24d57b640d9803593a6222c7de12dd4e/testng-6.11-sources.jar!/org/testng/internal/Invoker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -863,30 +831,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/auto/stack/AbstractTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/stack/Helpers/SearchHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/stack/driver/DriverManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/auto/stack/SearchTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="165">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.6.0/8608ba88b271f3e63ce73613bd4d2cba7c4e8783/selenium-api-3.6.0-sources.jar!/org/openqa/selenium/WebElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="49" column="7" lean-forward="false" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/StackPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+        <state relative-caret-position="340">
+          <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/stack/ApplicationManagers/StackManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/stack/pages/AbstractPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="737">
-          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        <state relative-caret-position="691">
+          <caret line="69" column="43" lean-forward="false" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="e#3733#3734#0" expanded="true" />
+            <element signature="e#3797#3798#0" expanded="true" />
           </folding>
         </state>
       </provider>

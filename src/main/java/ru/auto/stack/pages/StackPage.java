@@ -7,10 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-/**
- * Created by 05.10.2017.
- */
-
 public class StackPage extends AbstractPage{
     private final static String HOME_URL = "https://stackoverflow.com/";
 
@@ -55,21 +51,41 @@ public class StackPage extends AbstractPage{
     public StackPage search(String searchText) {
         type(fieldSearch, searchText);
         click(buttonSearch);
-        verifySummaryQuestions(questionsSummary);
-        click(questionsSummary);
         return this;
     }
 
-    public StackPage checkHeaderQuestion() {
-        Assert.assertEquals(questionsHeader, questionsSummary);
+    public StackPage verifyTitleQuestion() {
+        verifySummaryQuestions(questionsSummary);
+        return this;
+    }
+
+    public StackPage getHeaderQuestion() {
+        getHeadersQuestions(questionsHeader);
+        return this;
+    }
+
+    public StackPage assertSummaruAndHeaders() {
+        assertSummaryAndHeadersQuestions();
         return this;
     }
 
     public StackPage searchTags(String searchText) {
         click(tagsButtonSearch);
         type(tagsSearch, searchText);
+        return this;
+    }
+
+    public StackPage verifyTagsResult() {
         verifyTagsQuestions(fullMatchTagsResult);
+        return this;
+    }
+
+    public StackPage openFullMatchResult() {
         click(fullMatchTagsResult);
+        return this;
+    }
+
+    public StackPage verifyTagsQuestionResult() {
         verifyTagsQuestions(verifyTags);
         return this;
     }

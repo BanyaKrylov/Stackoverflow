@@ -4,9 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created 05.10.2017.
- */
 public class DriverManager {
     private static WebDriver webDriver;
 

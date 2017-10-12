@@ -4,9 +4,6 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import ru.auto.stack.ApplicationManagers.StackManager;
 
-/**
- * Created by Иван on 04.10.2017.
- */
 public abstract class AbstractTest {
   protected static final StackManager MANAGER = new StackManager();
 

@@ -11,7 +11,13 @@ public class SearchTests extends AbstractTest {
   @Test
   public void Search() throws IOException, InterruptedException {
     MANAGER.search().openEbayHomePage().
-            search(searchText).
-            searchTags(searchText);
+            search(searchText)
+            .verifyTitleQuestion()
+            .getHeaderQuestion()
+            .assertSummaruAndHeaders()
+            .searchTags(searchText)
+            .verifyTagsResult()
+            .openFullMatchResult()
+            .verifyTagsQuestionResult();
   }
 }
