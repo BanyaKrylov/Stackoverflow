@@ -34,8 +34,14 @@ public class StackPage extends AbstractPage{
     @FindBy(xpath = "//table[@id='tags-browser']//a[.='webdriver']")
     private WebElement fullMatchTagsResult;
 
+    @FindBy(xpath = "//table[@id='tags-browser']//a[.='webdriver']")
+    private List<WebElement> fullMatchTagsResults;
+
     @FindBy(xpath = "//a[.='webdriver']")
     private WebElement verifyTags;
+
+    @FindBy(xpath = "//a[.='webdriver']")
+    private List<WebElement> verifyTagss;
 
     @FindBy(xpath = "//a[@id='nav-tags']")
     private WebElement tagsButtonSearch;
@@ -79,7 +85,7 @@ public class StackPage extends AbstractPage{
     }
 
     public StackPage verifyTagsResult() {
-        verifyTagsQuestions(fullMatchTagsResult);
+        verifyTagsQuestions(fullMatchTagsResults);
         return this;
     }
 
@@ -89,7 +95,7 @@ public class StackPage extends AbstractPage{
     }
 
     public StackPage verifyTagsQuestionResult() {
-        verifyTagsQuestions(verifyTags);
+        verifyTagsQuestions(verifyTagss);
         return this;
     }
 }

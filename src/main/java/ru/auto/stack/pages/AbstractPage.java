@@ -86,8 +86,8 @@ public abstract class AbstractPage {
         }
     }
 
-    protected void verifyTagsQuestions(WebElement locator) {
-        tagsQuestions = driver.findElements(By.xpath(String.valueOf(locator)));
+    protected void verifyTagsQuestions(List locators) {
+        tagsQuestions = locators;
         for (WebElement element : tagsQuestions) {
             textTags.add(element.getText());
             for (int i = 0; i < textTags.size(); i++) {
