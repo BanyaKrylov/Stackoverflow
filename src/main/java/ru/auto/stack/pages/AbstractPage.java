@@ -107,7 +107,9 @@ public abstract class AbstractPage {
     }
 
     protected void assertSummaryAndHeadersQuestions() {
-        Assert.assertEquals(titleQuestions, textHeaders);
+        for (int i = 0; i < titleQuestions.size(); i++) {
+            Assert.assertTrue(checkForWord(textHeaders.get(i), titleQuestions.get(i)));
+        }
     }
 
     public void switchToTabOrWindowWithIndex(int tabIndex) {
@@ -146,7 +148,7 @@ public abstract class AbstractPage {
         }
     }
 
-    boolean checkForWord(String line, String word){
-        return line.toLowerCase().contains(word);
+    boolean checkForWord(String line, String word) {
+        return line.toLowerCase().contains(word.toLowerCase());
     }
 }
