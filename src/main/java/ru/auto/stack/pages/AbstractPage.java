@@ -1,6 +1,7 @@
 package ru.auto.stack.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,9 +16,9 @@ public abstract class AbstractPage {
     protected WebDriver driver;
     protected List<WebElement> elementQuestions;
     protected List<WebElement> tagsQuestions;
-    protected List<String> titleQuestions;
-    protected List<String> textTags;
-    protected List<String> textHeaders;
+    protected List<String> titleQuestions = new ArrayList<>();
+    protected List<String> textTags = new ArrayList<>();
+    protected List<String> textHeaders = new ArrayList<>();
 
     public AbstractPage(WebDriver driver) {
         this.driver = driver;
@@ -59,7 +60,7 @@ public abstract class AbstractPage {
     protected void verifySummaryQuestions(By locator) {
         elementQuestions = driver.findElements(locator);
         for (WebElement element : elementQuestions) {
-            titleQuestions.add(element.getAttribute("title"));
+            element.getAttribute("title");
             for (String title : titleQuestions) {
                 Assert.assertTrue(title.contains("webdriver"));
             }
@@ -70,9 +71,9 @@ public abstract class AbstractPage {
         elementQuestions = locators;
         for (WebElement element : elementQuestions) {
             titleQuestions.add(element.getAttribute("title"));
-            for (String title : titleQuestions) {
-                Assert.assertTrue(title.contains("webdriver"));
-            }
+        }
+        for (String title : titleQuestions) {
+            Assert.assertTrue(checkForWord(title, "webdriver"));
         }
     }
 
@@ -98,6 +99,7 @@ public abstract class AbstractPage {
 
     protected void getHeadersQuestions(WebElement headerLocator) {
         for (int i = 0; i < titleQuestions.size(); i++) {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementQuestions.get(i));
             click(elementQuestions.get(i));
             textHeaders.add(headerLocator.getText());
             driver.navigate().back();
@@ -142,5 +144,9 @@ public abstract class AbstractPage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    boolean checkForWord(String line, String word){
+        return line.toLowerCase().contains(word);
     }
 }
