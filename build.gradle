@@ -2,7 +2,6 @@ apply plugin: 'java'
 
 repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io' }
 }
 
 configurations {
@@ -14,23 +13,8 @@ dependencies {
     compile 'org.seleniumhq.selenium:selenium-java:3.4.0'
     agent "org.aspectj:aspectjweaver:1.8.0"
     compile "ru.yandex.qatools.allure:allure-testng-adaptor:1.4.0.RC4"
-    compile 'ru.d10xa:gradle-allure-plugin:0.5.5'
-    compile 'com.github.User:Repo:Tag'
 }
 
 test {
     useTestNG()
-}
-
-test.doFirst {
-    jvmArgs "-javaagent:${configurations.agent.singleFile}"
-}
-
-task generateAllureReport(type: Exec) {
-    commandLine "allure", "generate build/allure-results"
-}
-test.finalizedBy(generateAllureReport)
-
-task openAllureReport(type: Exec) {
-    commandLine "allure report open -o build/reports/allure"
 }
